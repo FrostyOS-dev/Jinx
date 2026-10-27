@@ -1270,7 +1270,7 @@ do_configure() {
         fi
     fi
 
-    local prefix="/usr"
+    local prefix="${JINX_TARGET_PREFIX:-/usr}"
     local sysroot="/sysroot"
 
     cd "${build_dir}"/builds/${name}
@@ -1298,7 +1298,7 @@ do_build() {
         fi
     fi
 
-    local prefix="/usr"
+    local prefix="${JINX_TARGET_PREFIX:-/usr}"
     local sysroot="/sysroot"
 
     cd "${build_dir}"/builds/${name}
@@ -1329,7 +1329,7 @@ do_package() {
         fi
     fi
 
-    local prefix="/usr"
+    local prefix="${JINX_TARGET_PREFIX:-/usr}"
     local sysroot="/sysroot"
 
     mkdir -p "${dest_dir}${prefix}"
@@ -2170,7 +2170,7 @@ do_run_in() {
         fi
     fi
 
-    local prefix="/usr"
+    local prefix="${JINX_TARGET_PREFIX:-/usr}"
     local sysroot="/sysroot"
 
     cd "${build_dir}"/builds/${name}
